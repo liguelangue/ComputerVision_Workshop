@@ -9,7 +9,9 @@ cv2.THRESH_BINARY: The type of thresholding to be applied (e.g.,cv2.THRESH_BINAR
 
 # Adaptive Thresholding Example
 Two main types of adaptive thresholding:
+
 • Mean Adaptive Thresholding: threshold is set to be the mean of the neighborhood values minus a constant
+
 • Gaussian Adaptive Thresholding: threshold is set as the weighted sum of the neighborhood values minus a constant
 ```
 # Apply adaptive mean thresholding
@@ -31,3 +33,16 @@ _, thresh_otsu = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTS
 thresh: Set to 0 because Otsu’s method, automatically determines the optimal threshold.
 maxval: The maximum value to assign to thresholded pixels.
 type: The thresholding method (e.g.cv2.THRESH_BINARY) combined with cv2.THRESH_OTSU for automatic threshold determination
+
+# Additional Implementation:
+
+## Change Test Image
+
+Not only test the given photo.png, but I also test the other image in the folder.
+
+## Change Parameters
+
+Try to use different block size to adaptive mean thresholding, and compare the results.
+
+Try to use different block size to adaptive Gaussian thresholding, and compare the results.
+
